@@ -1,24 +1,8 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Running 
 
-Things you may want to cover:
+Place your Spacetraders API Token in `config/application.yml`, look at application.yml.example for an example. 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`bundle install`
+Run with `bin/dev/` or `rails s`
