@@ -1,9 +1,15 @@
+<%= @resp %>
+<div class="m-16 ">
+<p>🚀 Ship Name: <%= @resp['symbol'] %></p>
+<p>⛽️ Fuel: <%= @resp['fuel']['current'] %></p>
+</div>
+<br>
 
 <div class="px-4 sm:px-6 lg:px-8">
   <div class="sm:flex sm:items-center">
     <div class="sm:flex-auto">
       <h1 class="text-base font-semibold leading-6 text-green-400">Ships</h1>
-      <p class="mt-2 text-sm text-green-700">A list of all your ships</p>
+      <p class="mt-2 text-sm text-green-500">A list of all your ships</p>
     </div>
   </div>
   <div class="mt-8 flow-root">
@@ -18,21 +24,13 @@
             </tr>
           </thead>
           <tbody class="divide-y divide-green-200">
-          <% @resp["data"].each do |ship| %>
+          <%# @resp["data"].each do |ship| %>
 
             <tr>
               <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-green-400 sm:pl-0">
-              <a href="/ships/<%= ship["symbol"] %>">
-              <%= ship["symbol"] %>
-              </a>
-              
               </td>
-
-
-              <td class="whitespace-nowrap px-3 py-4 text-sm text-green-500"><%= ship["fuel"]["current"]%> / <%= ship["fuel"]["capacity"] %></td>
-              <td class="whitespace-nowrap px-3 py-4 text-sm text-green-500"> <%= ship["cargo"]["capacity"]%> </td>
             </tr>
-            <% end %>
+            <%# end %>
           </tbody>
         </table>
       </div>
@@ -40,3 +38,12 @@
   </div>
 </div>
 
+<div class="bg-black">
+<h2 class="text-2xl text-green-500">Cargo</h2>
+<% @resp["cargo"]["inventory"].each do |cargo| %>
+<%# cargo %>
+<%= cargo["units"] %> units of 
+<%= cargo ["symbol"] %>
+<br>
+<% end %>
+</div>

@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   "/ships"
 
   get '/ships', to: 'ships#show'
+  get '/market', to: 'market#show'
+  get '/ships/:ship_id', to: 'ships#ship_details'
+  get '/ship_cargo/', to: 'ships#show'
 end

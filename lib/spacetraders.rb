@@ -1,0 +1,1 @@
+/Users/stets/projects/spacetraders_api_ruby_wrapper/spacetraders.rb
